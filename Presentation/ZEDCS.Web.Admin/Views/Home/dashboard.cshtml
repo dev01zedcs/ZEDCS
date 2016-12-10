@@ -1,0 +1,161 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container zed-dashboard">
+    <div class="row">
+        <div class="col-sm-24">
+            <div class="zedd-welcome">
+                <h1>Welcome, Mahavir</h1>
+                <p>Good Evening!</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="zedd-brick">
+                <div class="zedd-brick-label">Disciplines</div>
+                <div class="zedd-brick-content">
+                    <div class="text-huge">12</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="zedd-brick">
+                <div class="zedd-brick-label">Sectors</div>
+                <div class="zedd-brick-content">
+                    <div class="text-huge">42</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="zedd-brick">
+                <div class="zedd-brick-label">Parameters</div>
+                <div class="zedd-brick-content">
+                    <div class="text-huge">54</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="zedd-brick">
+                <div class="zedd-brick-label">Questions</div>
+                <div class="zedd-brick-content">
+                    <div class="text-huge">243</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 hide">
+            <h3 class="zedd-heading">Number of Registrations last 7 days</h3>
+            <div class="zedd-chart">
+                <canvas width="auto" height="300" id="ordersChart"></canvas>
+            </div>
+        </div> 
+        <div class="col-sm-12">
+            <h3 class="zedd-heading">Overview of Sectors</h3>
+            <div class="zedd-brick zedd-brick-table">
+                <div class="zedd-table table-responsive">
+                    <table class="table table-hover text-left mb0">
+                        <thead>
+                            <tr>
+                                <th>Sector</th>
+                                <th>Parameters</th>
+                                <th>Questions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sector 01</td>
+                                <td>48</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>Sector 02</td>
+                                <td>48</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>Sector 03</td>
+                                <td>48</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>Sector 04</td>
+                                <td>48</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>Sector 05</td>
+                                <td>48</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>Sector 06</td>
+                                <td>48</td>
+                                <td>58</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	$(document).ready(function(){
+		Chart.defaults.global.defaultFontColor = '#b6b7b9';
+		Chart.defaults.global.defaultFontFamily = 'Roboto';
+
+		var oChart = $("#ordersChart");
+		var chartContext = document.getElementById('ordersChart').getContext('2d');
+		var bgGradient = chartContext.createLinearGradient(0, 0, 0, 400);
+		    bgGradient.addColorStop(0, 'rgba(64,190,160,0.7)');
+		    bgGradient.addColorStop(1, 'rgba(64,190,160,0)');
+		var data = {
+			labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+			datasets: [
+			{
+				lineTension: 0.23,
+				pointRadius: 8,
+				pointHoverRadius: 10,
+				pointBorderWidth: 0,
+				pointBackgroundColor: "#329478",
+				pointHoverBorderColor: "#329478",
+				label: "Week Orders",
+				backgroundColor: bgGradient,
+				borderColor: "#329478",
+				pointStyle: 'circle',
+				data: [24, 18, 14, 22, 18, 32, 48],
+			}
+			]
+		};
+
+		var myLineChart = new Chart(oChart, {
+			type: 'line',
+			data: data,
+			options: {
+				legend: {
+					display: false
+				},
+				maintainAspectRatio: false,
+				scales:{
+					xAxes:[{
+						gridLines:{
+							color:"#dee1e4",
+							zeroLineColor:"#f7f8f9"
+						}
+					}],
+					yAxes:[{
+						gridLines:{
+							color:"#dee1e4",
+							zeroLineColor:"#f7f8f9"
+						}
+					}],
+				}
+			}
+		});
+	});
+</script>

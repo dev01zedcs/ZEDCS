@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Category Add Or Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container form-page">
+    <div class="row">
+        <div class="col-sm-18">
+            <div class="zed-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="javascript:void(0);" data-toggle="tab" data-target="#tab1">Basic</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active fade in" id="tab1">
+                        <form action="">
+                            <div class="form-group">
+                                <label>Category Code</label>
+                                <input type="text" class="form-control" placeholder="Category Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Category Name</label>
+                                <input type="text" class="form-control" placeholder="Something">
+                            </div>
+                            <!-- <div class="form-group">
+                                <label>Input With Addon</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="zi-cog"></i></div>
+                                    <input type="text" class="form-control" placeholder="Field input with addon">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Category Category</label>
+                                <select class="form-control">
+                                    <option>Category 1</option>
+                                    <option>Category 2</option>
+                                    <option>Category 3</option>
+                                    <option>Category 4</option>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <a href="javascript:void(0);" class="btn btn-primary">Save</a>
+                                <a href="javascript:void(0);" class="btn btn-success">Save &amp; Add Another</a>
+                                <a href="categories" class="btn btn-default">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

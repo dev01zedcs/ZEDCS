@@ -1,0 +1,499 @@
+/******************* GLOBALS BEGIN *******************/
+body{
+	font-size: 14px;
+}
+a:hover, a:focus{
+	text-decoration: none !important;
+}
+.form-control{
+	box-shadow: none !important;
+	height: 42px;
+	line-height: 42px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+textarea.form-control{
+	resize: vertical;
+}
+.form-control-static{
+	line-height: 42px;
+	padding: 0;
+	text-align: center;
+	display: block;
+}
+.form-group .form-control-static{
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	text-align: left;
+	padding-left: 12px;
+	background-color: #f7f8f9;
+}
+.form-control:focus{
+	border-color: #329478;
+}
+.btn{
+	padding-top: 0;
+	padding-bottom: 0;
+	line-height: 42px;
+	padding-left: 24px;
+	padding-right: 24px;
+	border: 0;
+}
+.btn-default{
+	background-color: #e7e8e9;
+}
+.btn-default:hover,
+.btn-default:focus{
+	background-color: #c7c8c9;
+}
+.pr0{
+	padding-right: 0 !important;
+}
+.mb0{
+	margin-bottom: 0 !important;
+}
+.table-fixed{
+	table-layout: fixed;
+}
+/******************* GLOBALS END *******************/
+/******************* LEFT BEGIN *******************/
+.zed-left{
+	position: fixed;
+	width: 240px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: #242629;
+	box-shadow: -4px 0 12px rgba(0,0,0,0.3);
+	z-index: 4;
+	transition: 0.25s;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+}
+.zed-left ul {
+	margin: 0;
+}
+.zed-left-scroll{
+	overflow-y: auto;
+	max-height: calc(100vh - 82px);
+	max-height: -webkit-calc(100vh - 82px);
+	max-height: -moz-calc(100vh - 82px);
+}
+.zed-left ul > li {
+	padding: 0;
+}
+.zed-left ul > li > a {
+	display: block;
+	color: rgba(255,255,255,0.7);
+	text-align: left;
+	padding: 16px 0;
+	text-decoration: none !important;
+	transition: 0.25s;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	padding-left: 20px;
+}
+.zed-left ul > li > a:hover,
+.zed-left ul > li.active > a {
+	background-color: rgba(0,0,0,0.3);
+	color: #ffffff;
+}
+.zed-left ul > li > a:active{
+	background-color: rgba(0,0,0,0.7);
+	color: #ffffff;
+}
+.zed-left ul > li.zedl-first > a {
+	padding: 0;
+	padding-left: 20px;
+	background-color: #fff;
+	color: #ffffff;
+	display: block;
+	text-align: center;
+	line-height: 82px;
+}
+.zed-left ul > li.zedl-first > a > i{
+	margin: 0;
+}
+.zed-left ul > li > a > i{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.zed-left ul > li > a > span{
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.zed-logo{
+	height: 82px;
+}
+.zed-logo > img{
+	max-height: 42px;
+	display: inline-block;
+}
+/******************* LEFT END *******************/
+/******************* CONTENT BOX BEGIN *******************/
+.zed-content{
+	overflow-y: auto;
+	position: fixed;
+	width: calc(100% - 240px);
+	width: -webkit-calc(100% - 240px);
+	width: -moz-calc(100% - 240px);
+	height: calc(100% - 82px);
+	height: -webkit-calc(100% - 82px);
+	height: -moz-calc(100% - 82px);
+	background-color: #f7f8f9;
+	top: 82px;
+	left: 240px;
+	padding: 24px;
+	z-index: 2;
+}
+/******************* CONTENT BOX END *******************/
+/******************* TOP BOX BEGIN *******************/
+.zed-top{
+	position: fixed;
+	border-bottom: 1px #dee1e4 solid;
+	width: calc(100% - 240px);
+	width: -webkit-calc(100% - 240px);
+	width: -moz-calc(100% - 240px);
+	top: 0;
+	left: 240px;
+	padding: 0 24px;
+	line-height: 82px;
+	background-color: #ffffff;
+	z-index: 3;
+}
+.zed-breadcrumb .breadcrumb{
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+.zed-top .dropdown > a{
+	line-height: 82px;
+	display: inline-block;
+	padding: 0 24px;
+}
+.zed-top .dropdown > ul.dropdown-menu{
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	border-radius: 2px;
+	margin-top: -10px;
+	min-width: 140px;
+	display: block !important;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.15s ease-out;
+	-webkit-transition: 0.15s ease-out;
+	-moz-transition: 0.15s ease-out;
+}
+.zed-top .dropdown.open > ul.dropdown-menu{
+	visibility: visible;
+	opacity: 1;
+	margin-top: 6px;
+}
+.zed-top .dropdown.open > ul.dropdown-menu > li > a {
+	padding: 10px 20px;
+}
+/******************* TOP BOX END *******************/
+/******************* HOME/DASHBOARD BEGIN *******************/
+.zedd-heading{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.zedd-chart{
+	background-color: #ffffff;
+	border: 1px #f1f2f3 solid;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+	padding: 20px;
+	margin-bottom: 24px;
+}
+.zedd-welcome{
+	text-align: center;
+	padding: 2em 0;
+}
+.zedd-welcome h1{
+	position: relative;
+	display: inline-block;
+}
+.zedd-brick{
+	background-color: #ffffff;
+	display: block;
+	border: 1px #f1f2f3 solid;
+	/*box-shadow: 0 2px 5px rgba(0,0,0,0.07);*/
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 24px;
+	overflow: hidden;
+}
+.zedd-brick.zedd-brick-table{
+	padding: 0;
+}
+.zedd-brick.zedd-brick-table table{
+	/*border: 0;*/
+}
+.zedd-brick.zedd-brick-table table tr td{
+	padding: 10px;
+}
+.zedd-brick.zedd-brick-table table thead tr th{
+	border-bottom-width: 3px;
+	padding: 10px;
+}
+.zedd-brick.text-left{
+	text-align: left;
+}
+.zedd-brick-label{
+	font-size: 14px;
+	margin-bottom: 14px;
+	position: relative;
+	display: inline-block;
+}
+.zedd-brick-label:before{
+	content: "";
+	position: absolute;
+	height: 2px;
+	background-color: #329478;
+	width: 30px;
+	bottom: -10px;
+	left: 0;
+}
+.text-huge{
+	font-size: 32px;
+	font-weight: bold;
+}
+/******************* HOME/DASHBOARD END *******************/
+/******************* ERROR PAGES BEGIN *******************/
+.zed-page-404{
+	text-align: center;
+}
+.zed-page-404 h1{
+	font-size: 24px;
+	padding: 4em;
+	font-weight: 100;
+	margin: 0;
+}
+/******************* ERROR PAGES END *******************/
+/******************* DATA TABLES BEGIN *******************/
+.zed-data-table tr td,
+.zed-data-table tr th{
+	position: relative;
+	vertical-align: middle !important;
+	padding: 8px 12px !important;
+}
+.zed-data-table tr td .btn{
+	line-height: 32px;
+}
+.zed-data-table tr th{
+	font-size: 13px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-weight: bold !important;
+	background-color: #e7e8e9;
+}
+.zed-data-table tr td:not(.zed-table-settings-td){
+	white-space: nowrap;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: auto;
+	min-height: 0;
+}
+.zed-data-table tr td a{
+	text-decoration: none !important;
+}
+.zed-table-settings{
+	text-align: right;
+}
+.zed-table-settings ul{
+	margin: 0;
+}
+.zed-table-settings a{
+	font-size: 13px;
+}
+.zed-page-table{
+	margin-top: 10px;
+}
+.zed-page-table table {
+	background: #fff;
+	border: 1px #dee1e4 solid;
+}
+.zed-data-table-filter label {
+	font-size: 0;
+	display: block;
+}
+.zed-data-table-filter label input{
+	font-size: 14px;
+	display: block;
+	width: 100% !important;
+	line-height: 42px !important;
+	height: 42px !important;
+	padding: 0 14px;
+	background-image: url(../img/icons/search.svg) !important;
+	background-size: 16px;
+	background-repeat: no-repeat;
+	background-position: 12px 11px;
+	padding-left: 42px;
+	box-shadow: none;
+	margin-bottom: 6px;
+}
+.zed-data-table-pagination .pagination{
+	margin: 0;
+}
+.zed-checkbox{
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.zed-checkbox > input{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	opacity: 0;
+}
+.zed-checkbox > input + span{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	border: 2px #dee1e4 solid;
+	border-radius: 4px;
+	transition: 0.24s;
+	-webkit-transition: 0.24s;
+	-moz-transition: 0.24s;
+	background: url(../img/icons/check-small.png) #ffffff no-repeat center center;
+}
+.zed-checkbox > input:focus + span{
+	border-color: #a7a8a9;
+}
+.zed-checkbox > input:checked + span{
+	background-color: #329478;
+	border-color: #329478;
+}
+.zed-checkbox > input + span + b{
+	font-weight: normal;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+.zed-checkboxes-list > li > label{
+	padding: 8px 0;
+}
+.zed-questions-list > li{
+	border: 0;
+	background-color: #f7f8f9;
+}
+.zed-questions-list > li + li {
+	margin-top: 10px;
+}
+/******************* DATA TABLES END *******************/
+/******************* MC TABS BEGIN *******************/
+.zed-tabs + .zed-tabs{
+	margin-top: 30px;
+}
+.zed-tabs .nav.nav-tabs > li > a{
+	color: #919191;
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: inset 0 0 transparent;
+	transition: 0.25s;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	padding-top: 0;
+}
+.zed-tabs .nav.nav-tabs > li > a:hover {
+	background: #f1f2f3;
+	box-shadow: inset 0 -1px #329478;
+}
+.zed-tabs .nav.nav-tabs > li.active > a {
+	background: #fff;
+	color: #329478;
+	box-shadow: inset 0 -3px #329478;
+}
+.zed-tabs .tab-content > .tab-pane {
+	padding: 15px;
+	border: 1px #dee1e4 solid;
+	border-top: 0;
+	background: #fff;
+	box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+}
+.zed-tabs .tab-content .tab-pane{
+	padding: 30px;
+}
+.form-group > label{
+	font-size: 13px;
+}
+/******************* MC TABS END *******************/
+/******************* QUESTION CHOICE TABLE BEGIN *******************/
+.zed-question-choice-table thead tr th:nth-child(1){
+	width: 60px;
+	text-align: center;
+}
+.zed-question-choice-table thead tr th:last-child{
+	width: 300px;
+}
+/******************* QUESTION CHOICE TABLE END *******************/
+/******************* MOBILE FIXES BEGIN *******************/
+@media only screen and (max-width: 480px){
+	.zed-left{
+		width: 42px;
+	}
+	.zed-left ul > li > a{
+		height: 42px;
+		line-height: 42px !important;
+		padding: 0;
+	}
+	.zed-left ul > li > a > span{
+		display: none;
+	}
+	.zed-left ul > li > a > i {
+		font-size: 16px;
+		line-height: 42px !important;
+		margin: 0;
+	}
+	.zed-left ul > li.zedl-first > a > i{
+		line-height: 42px !important;
+	}
+	.zed-content{
+		position: fixed;
+		width: calc(100% - 42px);
+		width: -webkit-calc(100% - 42px);
+		width: -moz-calc(100% - 42px);
+		height: calc(100% - 42px);
+		height: -webkit-calc(100% - 42px);
+		height: -moz-calc(100% - 42px);
+		top: 42px;
+		left: 42px;
+		padding: 24px 12px;
+		z-index: 2;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.zed-top{
+		width: calc(100% - 42px);
+		width: -webkit-calc(100% - 42px);
+		width: -moz-calc(100% - 42px);
+		left: 42px;
+		padding: 0 12px;
+		line-height: 42px;
+	}
+}
+/******************* MOBILE FIXES END *******************/
+/******************* TINY PLUGINS BEGIN *******************/
+.rtd-asky{
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 4px;
+	text-align: center;
+}
+.rtd-asky-question{
+	font-size: 16px;
+	line-height: 24px;
+	margin: 15px 0;
+}
+.rtd-asky-btns > a + a {
+	margin-left: 20px;
+}
+/******************* TINY PLUGINS END *******************/

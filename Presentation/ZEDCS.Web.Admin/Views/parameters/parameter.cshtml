@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Parameter Add Or Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container form-page">
+    <div class="row">
+        <div class="col-sm-18">
+            <div class="zed-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="javascript:void(0);" data-toggle="tab" data-target="#tab1">Basic</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active fade in" id="tab1">
+                        <form action="">
+                            <div class="form-group">
+                                <label>Parameter Code</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Parameter Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Sector</label>
+                                <select class="form-control">
+                                    <option>1 - Something</option>
+                                    <option>2 - Something</option>
+                                    <option>3 - Something</option>
+                                    <option>4 - Something</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Discipline</label>
+                                <select class="form-control">
+                                    <option>1 - Something</option>
+                                    <option>2 - Something</option>
+                                    <option>3 - Something</option>
+                                    <option>4 - Something</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Parameter Description</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="zed-checkbox"><input type="checkbox"><span></span> <b>Red-Orange Mandatory</b></label>
+                            </div>
+                            <div class="form-group">
+                                <label class="zed-checkbox"><input type="checkbox"><span></span> <b>Green-White Mandatory</b></label>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label>Input With Addon</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="zi-cog"></i></div>
+                                    <input type="text" class="form-control" placeholder="Field input with addon">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Category Category</label>
+                                <select class="form-control">
+                                    <option>Category 1</option>
+                                    <option>Category 2</option>
+                                    <option>Category 3</option>
+                                    <option>Category 4</option>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <a href="javascript:void(0);" class="btn btn-primary">Save</a>
+                                <a href="javascript:void(0);" class="btn btn-success">Save &amp; Add Another</a>
+                                <a href="parameters" class="btn btn-default">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

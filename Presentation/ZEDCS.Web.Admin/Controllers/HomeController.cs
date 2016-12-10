@@ -8,6 +8,7 @@ namespace ZEDCS.Web.Admin.Controllers
 {
     public class HomeController : Controller
     {
+        [Route]
         public ActionResult Index()
         {
             return View();
@@ -24,6 +25,16 @@ namespace ZEDCS.Web.Admin.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+        
+        public ActionResult Dashboard()
+        {
             return View();
         }
     }

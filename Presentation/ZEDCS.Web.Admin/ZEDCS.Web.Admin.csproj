@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -158,8 +159,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Attributes\ZEDCSAuthorize.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\categoriesController.cs" />
+    <Compile Include="Controllers\disciplinesController.cs" />
+    <Compile Include="Controllers\evidencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\makeinindiaController.cs" />
+    <Compile Include="Controllers\parametersController.cs" />
+    <Compile Include="Controllers\questionsController.cs" />
+    <Compile Include="Controllers\sectorsController.cs" />
+    <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -169,25 +179,103 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\2bootstrap.css" />
+    <Content Include="Content\2bootstrap.min.css" />
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\rtd-asky.css" />
+    <Content Include="Content\zed-admin.css" />
+    <Content Include="Content\zed-icons.css" />
+    <Content Include="Content\zed-login.css" />
+    <Content Include="css\2bootstrap.css" />
+    <Content Include="css\2bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\rtd-asky.css" />
+    <Content Include="css\zed-admin.css" />
+    <Content Include="css\zed-icons.css" />
+    <Content Include="css\zed-login.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\mixcream-icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\icons\check-small.png" />
+    <Content Include="img\icons\search.svg" />
+    <Content Include="img\zed-fav.png" />
+    <Content Include="img\zed-logo.png" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.bootstrap.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.bootstrap.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.bootstrap4.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.foundation.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.foundation.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.jqueryui.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.jqueryui.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.material.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.material.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.semanticui.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.semanticui.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.uikit.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\dataTables.uikit.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\jquery.dataTables.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\jquery.dataTables.min.css" />
+    <Content Include="Plugins\datatables-1.10.12\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Plugins\datatables-1.10.12\images\favicon.ico" />
+    <Content Include="Plugins\datatables-1.10.12\images\sort_asc.png" />
+    <Content Include="Plugins\datatables-1.10.12\images\sort_asc_disabled.png" />
+    <Content Include="Plugins\datatables-1.10.12\images\sort_both.png" />
+    <Content Include="Plugins\datatables-1.10.12\images\sort_desc.png" />
+    <Content Include="Plugins\datatables-1.10.12\images\sort_desc_disabled.png" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.bootstrap.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.bootstrap.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.bootstrap4.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.foundation.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.foundation.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.jqueryui.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.jqueryui.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.material.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.material.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.semanticui.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.semanticui.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.uikit.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\dataTables.uikit.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\jquery.dataTables.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\jquery.dataTables.min.js" />
+    <Content Include="Plugins\datatables-1.10.12\js\jquery.js" />
+    <Content Include="Plugins\select2\select2.css" />
+    <Content Include="Plugins\select2\select2.full.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\mixcream-icons.eot" />
+    <Content Include="fonts\mixcream-icons.ttf" />
+    <Content Include="fonts\mixcream-icons.woff" />
+    <Content Include="Plugins\datatables-1.10.12\images\Sorting icons.psd" />
+    <Content Include="img\.DS_Store" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.4.1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\rtd-asky.js" />
+    <Content Include="Scripts\rtd-toasty.js" />
+    <Content Include="Scripts\zed-app.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -214,9 +302,27 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\makeinindia\makeinindia.cshtml" />
+    <Content Include="Views\Home\dashboard.cshtml" />
+    <Content Include="Views\makeinindia\addedit.cshtml" />
+    <Content Include="Views\sectors\Index.cshtml" />
+    <Content Include="Views\sectors\sector.cshtml" />
+    <Content Include="Views\disciplines\index.cshtml" />
+    <Content Include="Views\disciplines\discipline.cshtml" />
+    <Content Include="Views\parameters\Index.cshtml" />
+    <Content Include="Views\parameters\parameter.cshtml" />
+    <Content Include="Views\categories\index.cshtml" />
+    <Content Include="Views\categories\category.cshtml" />
+    <Content Include="Views\evidences\Index.cshtml" />
+    <Content Include="Views\evidences\evidence.cshtml" />
+    <Content Include="Views\questions\Index.cshtml" />
+    <Content Include="Views\questions\question.cshtml" />
+    <Content Include="Views\users\Index.cshtml" />
+    <Content Include="Views\users\user.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

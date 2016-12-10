@@ -1,0 +1,197 @@
+﻿
+@{
+    ViewBag.Title = "Question Add Or Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container form-page">
+    <div class="row">
+        <div class="col-sm-18">
+            <div class="zed-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="javascript:void(0);" data-toggle="tab" data-target="#tab2">Sector/Parameter</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active fade in" id="tab2">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label>Sector</label>
+                                    <select class="form-control">
+                                        <!-- <option value="">-Select-</option> -->
+                                        <option>27 - Manufacturing</option>
+                                        <option>2 - Something</option>
+                                        <option>3 - Something</option>
+                                        <option>4 - Something</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label>Parameter</label>
+                                    <select class="form-control">
+                                        <!-- <option value="">-Select-</option> -->
+                                        <option>A1 - Something Parameter</option>
+                                        <option>2 - Something</option>
+                                        <option>3 - Something</option>
+                                        <option>4 - Something</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <select class="form-control">
+                                        <!-- <option value="">-Select-</option> -->
+                                        <option>Plan</option>
+                                        <option>2 - Something</option>
+                                        <option>3 - Something</option>
+                                        <option>4 - Something</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-24">
+                                <div class="alert alert-success text-center">Previous Questions in "27 - Manufacturing / A1 / Plan"</div>
+                                <ul class="list-group zed-questions-list">
+                                    <!-- <li class="list-group-item">No Questions Added</li> -->
+                                    <li class="list-group-item">What is your Parents Name?</li>
+                                    <li class="list-group-item">What is your Friends Name?</li>
+                                    <li class="list-group-item">What is your Someone else Name?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zed-tabs">
+                <div class="tab-content">
+                    <div class="tab-pane active fade in" id="tab1">
+                        <form action="">
+                            <div class="form-group">
+                                <label>New Question</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered table-striped table-fixed zed-question-choice-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Level</th>
+                                            <th>Level Text</th>
+                                            <th>Evidences</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="form-control-static">1</span></td>
+                                            <td>
+                                                <textarea class="form-control"></textarea>
+                                            </td>
+                                            <td>
+                                                <select class="form-control zed-select2" multiple>
+                                                    <option value="">Technology Plan (PDF, Image)</option>
+                                                    <option value="">Financial Plan (Excel)</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="form-control-static">2</span></td>
+                                            <td>
+                                                <textarea class="form-control"></textarea>
+                                            </td>
+                                            <td>
+                                                <select class="form-control zed-select2" multiple>
+                                                    <option value="">Technology Plan (PDF, Image)</option>
+                                                    <option value="">Financial Plan (Excel)</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="form-control-static">3</span></td>
+                                            <td>
+                                                <textarea class="form-control"></textarea>
+                                            </td>
+                                            <td>
+                                                <select class="form-control zed-select2" multiple>
+                                                    <option value="">Technology Plan (PDF, Image)</option>
+                                                    <option value="">Financial Plan (Excel)</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="form-control-static">4</span></td>
+                                            <td>
+                                                <textarea class="form-control"></textarea>
+                                            </td>
+                                            <td>
+                                                <select class="form-control zed-select2" multiple>
+                                                    <option value="">Technology Plan (PDF, Image)</option>
+                                                    <option value="">Financial Plan (Excel)</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="form-control-static">5</span></td>
+                                            <td>
+                                                <textarea class="form-control"></textarea>
+                                            </td>
+                                            <td>
+                                                <select class="form-control zed-select2" multiple>
+                                                    <option value="">Technology Plan (PDF, Image)</option>
+                                                    <option value="">Financial Plan (Excel)</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form-group">
+                                <label>More Information</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Weightage</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label>Input With Addon</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="zi-cog"></i></div>
+                                    <input type="text" class="form-control" placeholder="Field input with addon">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Category Category</label>
+                                <select class="form-control">
+                                    <option>Category 1</option>
+                                    <option>Category 2</option>
+                                    <option>Category 3</option>
+                                    <option>Category 4</option>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <a href="javascript:void(0);" class="btn btn-primary">Save</a>
+                                <a href="javascript:void(0);" class="btn btn-success">Save &amp; Add Another</a>
+                                <a href="sectors" class="btn btn-default">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	$(document).ready(function(){
+		$('.zed-select2').select2();
+	});
+</script>
+
